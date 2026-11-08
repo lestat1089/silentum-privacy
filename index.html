@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Silentum — Política de Privacidad</title>
+<meta name="description" content="Política de privacidad de Silentum: mensajería cifrada de extremo a extremo.">
+<style>
+  :root{
+    --bg:#0b0f14; --panel:#111823; --ink:#eaf6fa; --muted:#9fb4bd;
+    --accent:#3de0f0; --border:#1e2b36;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:40px 20px 80px}
+  header{border-bottom:1px solid var(--border);padding-bottom:20px;margin-bottom:28px}
+  .brand{font-family:ui-monospace,"Consolas",monospace;letter-spacing:6px;
+    font-size:22px;font-weight:700;color:var(--ink)}
+  .accent{height:3px;width:120px;margin-top:10px;
+    background:linear-gradient(90deg,#0a6e78,#12b5c9,#3de0f0,#6af5ff)}
+  h1{font-size:26px;margin:22px 0 4px}
+  h2{font-size:18px;margin:30px 0 8px;color:var(--accent);
+    font-family:ui-monospace,"Consolas",monospace;letter-spacing:.5px}
+  .meta{color:var(--muted);font-size:14px}
+  p,li{color:#d6e4ea}
+  a{color:var(--accent)}
+  ul{padding-left:20px}
+  .fill{background:rgba(255,180,60,.14);border:1px solid rgba(255,180,60,.5);
+    border-radius:5px;padding:1px 7px;color:#ffd38a}
+  .divider{margin:48px 0;border:0;border-top:1px solid var(--border)}
+  footer{margin-top:40px;color:var(--muted);font-size:13px;text-align:center}
+  @media (max-width:520px){.wrap{padding:28px 16px 60px}.brand{letter-spacing:4px;font-size:18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">SILENTUM</div>
+    <div class="accent"></div>
+  </header>
+
+  <!-- ============ ESPAÑOL ============ -->
+  <h1>Política de Privacidad</h1>
+  <p class="meta">Última actualización: 8 de noviembre de 2026 · Responsable:
+    Sergio Ferreira · Contacto: <a href="mailto:s.ferreira1089@gmail.com">s.ferreira1089@gmail.com</a></p>
+
+  <h2>1. Resumen</h2>
+  <p>Silentum es una app de mensajería diseñada para la privacidad. Tus mensajes se
+  cifran de extremo a extremo (E2E) en tu dispositivo: ni nosotros ni el servidor
+  podemos leer su contenido. No pedimos tu nombre, teléfono ni correo, y no usamos
+  publicidad ni rastreadores.</p>
+
+  <h2>2. Datos que se guardan solo en tu dispositivo</h2>
+  <p>Estos datos nunca salen de tu teléfono (salvo lo indicado en la sección 3):</p>
+  <ul>
+    <li>Tu identidad y tus claves privadas.</li>
+    <li>Tus contactos y tu historial (cifrado en reposo).</li>
+    <li>Tu rostro para el desbloqueo facial: el modelo y los datos biométricos se
+      procesan y almacenan únicamente en el dispositivo; nunca se suben.</li>
+    <li>Fotos de «captura de intruso» (si la activas), solo en el dispositivo.</li>
+    <li>Tus ajustes y preferencias.</li>
+  </ul>
+
+  <h2>3. Datos que pasan por nuestro servidor de relevo</h2>
+  <p>Para entregar mensajes, el servidor procesa solo datos cifrados que no puede leer:</p>
+  <ul>
+    <li>Un identificador anónimo (tu «código»), derivado de tus claves; no ligado a tu
+      identidad real.</li>
+    <li>Tu paquete de claves público, para que tus contactos puedan escribirte.</li>
+    <li>Mensajes cifrados en tránsito, que se eliminan del relevo tras entregarse.</li>
+  </ul>
+  <p>El contenido, tu voz y tus archivos viajan cifrados de extremo a extremo; el
+  servidor solo los reenvía.</p>
+
+  <h2>4. Lo que NO recopilamos</h2>
+  <ul>
+    <li>Nombre, teléfono, correo o agenda de contactos.</li>
+    <li>Ubicación.</li>
+    <li>Analítica de uso, perfiles publicitarios o rastreadores de terceros.</li>
+    <li>El contenido de tus mensajes o notas de voz.</li>
+  </ul>
+
+  <h2>5. Permisos del dispositivo</h2>
+  <ul>
+    <li><b>Cámara:</b> desbloqueo facial (en el dispositivo) y captura de intruso
+      opcional (foto local ante un desbloqueo fallido, como control antirrobo del dueño).</li>
+    <li><b>Micrófono:</b> notas de voz; tu voz se distorsiona en el dispositivo antes de
+      cifrarse y enviarse.</li>
+    <li><b>Internet:</b> enviar y recibir datos cifrados por el relevo.</li>
+    <li><b>Notificaciones:</b> avisarte de mensajes nuevos.</li>
+  </ul>
+
+  <h2>6. Proveedores y terceros</h2>
+  <ul>
+    <li><b>Servidor de relevo / backend:</b> actualmente Google Firebase (autenticación
+      anónima y Firestore) como procesador para reenviar datos cifrados.</li>
+    <li><b>Tiendas y pagos:</b> las compras las procesan Google Play o Huawei AppGallery;
+      no recibimos ni almacenamos los datos de tu tarjeta.</li>
+    <li><b>Verificación de integridad:</b> Google Play Integrity / Huawei SafetyDetect
+      para comprobar que la app es genuina y prevenir fraude y piratería (señales del
+      dispositivo, no contenido).</li>
+  </ul>
+
+  <h2>7. Datos biométricos (rostro)</h2>
+  <p>El reconocimiento facial es opcional y se ejecuta por completo en tu dispositivo.
+  La plantilla facial nunca se transmite ni se almacena fuera del teléfono y se elimina
+  si desactivas la función o borras los datos de la app.</p>
+
+  <h2>8. Conservación y eliminación</h2>
+  <ul>
+    <li>Los mensajes cifrados se eliminan del relevo una vez entregados.</li>
+    <li>Tu paquete de claves público permanece hasta que borras tu identidad.</li>
+    <li>Los datos locales permanecen hasta que usas el borrado de emergencia o
+      desinstalas.</li>
+  </ul>
+
+  <h2>9. Tus derechos</h2>
+  <p>Puedes acceder a tus datos locales dentro de la app y eliminarlos en cualquier
+  momento con el borrado de emergencia o desinstalando. Según tu país, puedes tener
+  derechos adicionales (acceso, rectificación, supresión, portabilidad); escríbenos
+  para ejercerlos.</p>
+
+  <h2>10. Menores</h2>
+  <p>Silentum no está dirigida a menores de 13 años y no recopila datos de menores a
+  sabiendas.</p>
+
+  <h2>11. Seguridad</h2>
+  <p>Ciframos de extremo a extremo con criptografía post-cuántica (CNSA 2.0). Tus
+  claves privadas permanecen en tu dispositivo. Ningún sistema es infalible, pero la
+  app está diseñada para que el contenido no sea legible fuera de los dispositivos de
+  los interlocutores.</p>
+
+  <h2>12. Cambios</h2>
+  <p>Podemos actualizar esta política. Publicaremos la nueva versión aquí con su fecha.</p>
+
+  <h2>13. Contacto</h2>
+  <p><a href="mailto:s.ferreira1089@gmail.com">s.ferreira1089@gmail.com</a></p>
+
+  <hr class="divider">
+
+  <!-- ============ ENGLISH ============ -->
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated: 8 November 2026 · Controller: Sergio Ferreira ·
+    Contact: <a href="mailto:s.ferreira1089@gmail.com">s.ferreira1089@gmail.com</a></p>
+
+  <h2>1. Summary</h2>
+  <p>Silentum is a privacy-focused messaging app. Your messages are end-to-end
+  encrypted (E2E) on your device: neither we nor the server can read their content. We
+  do not ask for your name, phone number or email, and we use no ads or trackers.</p>
+
+  <h2>2. Data kept only on your device</h2>
+  <p>This data never leaves your phone (except as noted in section 3):</p>
+  <ul>
+    <li>Your identity and private keys.</li>
+    <li>Your contacts and conversation history (encrypted at rest).</li>
+    <li>Your face for Face Unlock: the model and biometric data are processed and stored
+      only on the device and are never uploaded.</li>
+    <li>"Intruder capture" photos (if enabled), stored only on the device.</li>
+    <li>Your settings and preferences.</li>
+  </ul>
+
+  <h2>3. Data that passes through our relay server</h2>
+  <p>To deliver messages, the server processes only encrypted data it cannot read:</p>
+  <ul>
+    <li>An anonymous identifier (your "code"), derived from your keys; not linked to your
+      real identity.</li>
+    <li>Your public key bundle, so your contacts can message you.</li>
+    <li>Encrypted messages in transit, removed from the relay after delivery.</li>
+  </ul>
+  <p>Content, your voice and your files travel end-to-end encrypted; the server only
+  relays them.</p>
+
+  <h2>4. What we do NOT collect</h2>
+  <ul>
+    <li>Name, phone number, email or contact list.</li>
+    <li>Location.</li>
+    <li>Usage analytics, advertising profiles or third-party trackers.</li>
+    <li>The content of your messages or voice notes.</li>
+  </ul>
+
+  <h2>5. Device permissions</h2>
+  <ul>
+    <li><b>Camera:</b> Face Unlock (on-device) and optional intruder capture (a local
+      photo on a failed unlock, as an owner anti-theft control).</li>
+    <li><b>Microphone:</b> voice notes; your voice is distorted on-device before it is
+      encrypted and sent.</li>
+    <li><b>Internet:</b> to send and receive encrypted data through the relay.</li>
+    <li><b>Notifications:</b> to alert you to new messages.</li>
+  </ul>
+
+  <h2>6. Service providers and third parties</h2>
+  <ul>
+    <li><b>Relay / backend:</b> currently Google Firebase (anonymous auth and Firestore)
+      as a processor to relay encrypted data.</li>
+    <li><b>Stores and payments:</b> purchases are processed by Google Play or Huawei
+      AppGallery; we do not receive or store your card details.</li>
+    <li><b>Integrity checks:</b> Google Play Integrity / Huawei SafetyDetect to verify
+      the app is genuine and prevent fraud and piracy (device signals, not content).</li>
+  </ul>
+
+  <h2>7. Biometric data (face)</h2>
+  <p>Face recognition is optional and runs entirely on your device. The face template is
+  never transmitted or stored off the phone and is deleted if you disable the feature or
+  clear the app's data.</p>
+
+  <h2>8. Retention and deletion</h2>
+  <ul>
+    <li>Encrypted messages are removed from the relay once delivered.</li>
+    <li>Your public key bundle remains until you delete your identity.</li>
+    <li>Local data remains until you use emergency wipe or uninstall.</li>
+  </ul>
+
+  <h2>9. Your rights</h2>
+  <p>You can access your local data within the app and delete it at any time via
+  emergency wipe or by uninstalling. Depending on your country, you may have additional
+  rights (access, rectification, erasure, portability); contact us to exercise them.</p>
+
+  <h2>10. Children</h2>
+  <p>Silentum is not directed to children under 13 and does not knowingly collect
+  children's data.</p>
+
+  <h2>11. Security</h2>
+  <p>We encrypt end-to-end with post-quantum cryptography (CNSA 2.0). Your private keys
+  stay on your device. No system is infallible, but the app is designed so that content
+  is not readable outside the participants' devices.</p>
+
+  <h2>12. Changes</h2>
+  <p>We may update this policy. We will post the new version here with its date.</p>
+
+  <h2>13. Contact</h2>
+  <p><a href="mailto:s.ferreira1089@gmail.com">s.ferreira1089@gmail.com</a></p>
+
+  <footer>© 2026 Silentum · SILENCIO CIFRADO</footer>
+</div>
+</body>
+</html>
