@@ -43,7 +43,7 @@
 
   <!-- ============ ESPAÑOL ============ -->
   <h1>Política de Privacidad</h1>
-  <p class="meta">Última actualización: 8 de noviembre de 2026 · Responsable:
+  <p class="meta">Última actualización: 9 de noviembre de 2026 · Responsable:
     Sergio Ferreira · Contacto: <a href="mailto:s.ferreira1089@gmail.com">s.ferreira1089@gmail.com</a></p>
 
   <h2>1. Resumen</h2>
@@ -64,12 +64,15 @@
   </ul>
 
   <h2>3. Datos que pasan por nuestro servidor de relevo</h2>
-  <p>Para entregar mensajes, el servidor procesa solo datos cifrados que no puede leer:</p>
+  <p>Para entregar mensajes, nuestro servidor de relevo (infraestructura propia sobre
+  HTTPS y WebSocket) procesa únicamente los datos técnicos necesarios, ninguno de los
+  cuales revela el contenido:</p>
   <ul>
-    <li>Un identificador anónimo (tu «código»), derivado de tus claves; no ligado a tu
-      identidad real.</li>
+    <li>Un identificador anónimo (tu «código»), generado aleatoriamente en tu dispositivo;
+      no ligado a tu identidad real.</li>
     <li>Tu paquete de claves público, para que tus contactos puedan escribirte.</li>
-    <li>Mensajes cifrados en tránsito, que se eliminan del relevo tras entregarse.</li>
+    <li>Mensajes cifrados en tránsito, que se eliminan del relevo tras entregarse o, si
+      no se entregan, a los 30 días.</li>
   </ul>
   <p>El contenido, tu voz y tus archivos viajan cifrados de extremo a extremo; el
   servidor solo los reenvía.</p>
@@ -94,13 +97,14 @@
 
   <h2>6. Proveedores y terceros</h2>
   <ul>
-    <li><b>Servidor de relevo / backend:</b> actualmente Google Firebase (autenticación
-      anónima y Firestore) como procesador para reenviar datos cifrados.</li>
+    <li><b>Servidor de relevo / backend:</b> servidor propio (HTTPS y WebSocket) que solo
+      reenvía datos cifrados. No usamos Google Firebase ni servicios de Google/Huawei
+      para la mensajería.</li>
     <li><b>Tiendas y pagos:</b> las compras las procesan Google Play o Huawei AppGallery;
       no recibimos ni almacenamos los datos de tu tarjeta.</li>
-    <li><b>Verificación de integridad:</b> Google Play Integrity / Huawei SafetyDetect
-      para comprobar que la app es genuina y prevenir fraude y piratería (señales del
-      dispositivo, no contenido).</li>
+    <li><b>Verificación de integridad:</b> prevista con Huawei SafetyDetect / Google Play
+      Integrity para comprobar que la app es genuina y prevenir fraude y piratería
+      (señales del dispositivo, no contenido).</li>
   </ul>
 
   <h2>7. Datos biométricos (rostro)</h2>
@@ -110,7 +114,8 @@
 
   <h2>8. Conservación y eliminación</h2>
   <ul>
-    <li>Los mensajes cifrados se eliminan del relevo una vez entregados.</li>
+    <li>Los mensajes cifrados se eliminan del relevo una vez entregados o, si no se
+      entregan, a los 30 días.</li>
     <li>Tu paquete de claves público permanece hasta que borras tu identidad.</li>
     <li>Los datos locales permanecen hasta que usas el borrado de emergencia o
       desinstalas.</li>
@@ -127,10 +132,11 @@
   sabiendas.</p>
 
   <h2>11. Seguridad</h2>
-  <p>Ciframos de extremo a extremo con criptografía post-cuántica (CNSA 2.0). Tus
-  claves privadas permanecen en tu dispositivo. Ningún sistema es infalible, pero la
-  app está diseñada para que el contenido no sea legible fuera de los dispositivos de
-  los interlocutores.</p>
+  <p>Ciframos de extremo a extremo con criptografía híbrida: X25519 y ML-KEM-1024 para el
+  acuerdo de claves; Ed25519 y ML-DSA-87 para firmas; AES-256-GCM para el contenido, con
+  parámetros alineados a CNSA 2.0. Tus claves privadas permanecen en tu dispositivo.
+  Ningún sistema es infalible, pero la app está diseñada para que el contenido no sea
+  legible fuera de los dispositivos de los interlocutores.</p>
 
   <h2>12. Cambios</h2>
   <p>Podemos actualizar esta política. Publicaremos la nueva versión aquí con su fecha.</p>
@@ -142,7 +148,7 @@
 
   <!-- ============ ENGLISH ============ -->
   <h1>Privacy Policy</h1>
-  <p class="meta">Last updated: 8 November 2026 · Controller: Sergio Ferreira ·
+  <p class="meta">Last updated: 9 November 2026 · Controller: Sergio Ferreira ·
     Contact: <a href="mailto:s.ferreira1089@gmail.com">s.ferreira1089@gmail.com</a></p>
 
   <h2>1. Summary</h2>
@@ -162,12 +168,14 @@
   </ul>
 
   <h2>3. Data that passes through our relay server</h2>
-  <p>To deliver messages, the server processes only encrypted data it cannot read:</p>
+  <p>To deliver messages, our relay server (our own infrastructure over HTTPS and
+  WebSocket) processes only the technical data needed, none of which reveals content:</p>
   <ul>
-    <li>An anonymous identifier (your "code"), derived from your keys; not linked to your
-      real identity.</li>
+    <li>An anonymous identifier (your "code"), randomly generated on your device; not
+      linked to your real identity.</li>
     <li>Your public key bundle, so your contacts can message you.</li>
-    <li>Encrypted messages in transit, removed from the relay after delivery.</li>
+    <li>Encrypted messages in transit, removed from the relay after delivery or, if
+      undelivered, after 30 days.</li>
   </ul>
   <p>Content, your voice and your files travel end-to-end encrypted; the server only
   relays them.</p>
@@ -192,12 +200,14 @@
 
   <h2>6. Service providers and third parties</h2>
   <ul>
-    <li><b>Relay / backend:</b> currently Google Firebase (anonymous auth and Firestore)
-      as a processor to relay encrypted data.</li>
+    <li><b>Relay / backend:</b> our own server (HTTPS and WebSocket) that only relays
+      encrypted data. We do not use Google Firebase or Google/Huawei services for
+      messaging.</li>
     <li><b>Stores and payments:</b> purchases are processed by Google Play or Huawei
       AppGallery; we do not receive or store your card details.</li>
-    <li><b>Integrity checks:</b> Google Play Integrity / Huawei SafetyDetect to verify
-      the app is genuine and prevent fraud and piracy (device signals, not content).</li>
+    <li><b>Integrity checks:</b> planned with Huawei SafetyDetect / Google Play Integrity
+      to verify the app is genuine and prevent fraud and piracy (device signals, not
+      content).</li>
   </ul>
 
   <h2>7. Biometric data (face)</h2>
@@ -207,7 +217,8 @@
 
   <h2>8. Retention and deletion</h2>
   <ul>
-    <li>Encrypted messages are removed from the relay once delivered.</li>
+    <li>Encrypted messages are removed from the relay once delivered or, if undelivered,
+      after 30 days.</li>
     <li>Your public key bundle remains until you delete your identity.</li>
     <li>Local data remains until you use emergency wipe or uninstall.</li>
   </ul>
@@ -222,9 +233,11 @@
   children's data.</p>
 
   <h2>11. Security</h2>
-  <p>We encrypt end-to-end with post-quantum cryptography (CNSA 2.0). Your private keys
-  stay on your device. No system is infallible, but the app is designed so that content
-  is not readable outside the participants' devices.</p>
+  <p>We encrypt end-to-end with hybrid cryptography: X25519 and ML-KEM-1024 for key
+  agreement; Ed25519 and ML-DSA-87 for signatures; AES-256-GCM for content, with
+  parameters aligned with CNSA 2.0. Your private keys stay on your device. No system is
+  infallible, but the app is designed so that content is not readable outside the
+  participants' devices.</p>
 
   <h2>12. Changes</h2>
   <p>We may update this policy. We will post the new version here with its date.</p>
